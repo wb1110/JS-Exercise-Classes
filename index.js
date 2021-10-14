@@ -48,23 +48,20 @@ class Person {
     this.stomach = [];
   }
 
-  eat(someFood, edible) {
-    this.someFood = someFood;
+  eat(edible) {
     this.edible = edible;
-    if (this.stomach > 10){
-      return console.log('FULL');
-    } else if (someFood === edible){
-      this.stomach.push(someFood);
-    }
+    if (this.stomach.length < 10){
+      this.stomach.push(edible);
   }
+}
 
 
   poop(){
-    this.stomach = 0;
+    this.stomach = [];
   }
 
-  toString(name, age){
-    return `${name}, ${age}`;
+  toString(){
+    return `${this.name}, ${this.age}`;
   }
   
 }
